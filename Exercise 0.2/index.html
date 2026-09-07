@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appliance Energy Consumption Website | Home</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="Go to home page">
+          <img src="PowerIcon.png" alt="Power logo" />
+          <span>Appliance Energy</span>
+        </a>
+        <div class="nav-links">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="televisions.html">Televisions</a>
+          <a class="nav-link" href="about.html">About Us</a>
+          <a class="nav-link" href="storyboard.html">Story Board</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Australian appliance insights</p>
+          <h1>Appliance Energy Consumption</h1>
+          <p>
+            Explore how everyday devices use power across Australian households,
+            from televisions and refrigerators to heating and cooling systems.
+          </p>
+          <a class="button primary" href="televisions.html">View television data</a>
+        </div>
+        <div class="hero-panel">
+          <h2>Quick facts</h2>
+          <ul>
+            <li>Average household devices vary greatly by usage and efficiency.</li>
+            <li>Standby power can add up over time.</li>
+            <li>Choosing efficient appliances can lower energy bills.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="content-card">
+        <h2>Home energy overview</h2>
+        <p>
+          In the Australian market, appliance energy consumption is shaped by product
+          size, operating time, climate, and usage habits. Larger appliances such as
+          air conditioners and electric heating systems usually draw more power, while
+          energy-efficient models can deliver similar performance with lower yearly energy use.
+        </p>
+        <p>
+          Monitoring power use and understanding daily operating hours helps households
+          compare running costs and make better purchasing decisions.
+        </p>
+      </section>
+
+      <section class="content-card calculator-card">
+        <h2>Interactive Appliance Energy Calculator</h2>
+        <form id="energy-form" novalidate>
+          <div class="form-grid">
+            <label>
+              Appliance
+              <select id="appliance" name="appliance">
+                <option value="">Choose an appliance</option>
+                <option value="60">Laptop</option>
+                <option value="120">LED Television</option>
+                <option value="180">Refrigerator</option>
+                <option value="900">Air Conditioner</option>
+                <option value="1500">Electric Heater</option>
+              </select>
+            </label>
+
+            <label>
+              Power usage (watts)
+              <input id="watts" name="watts" type="number" min="1" step="1" placeholder="e.g. 120" />
+            </label>
+
+            <label>
+              Average hours per day
+              <input id="hours" name="hours" type="number" min="0.1" step="0.1" placeholder="e.g. 5" />
+            </label>
+
+            <label>
+              Electricity price (cents per kWh)
+              <input id="price" name="price" type="number" min="0.1" step="0.1" placeholder="e.g. 28.5" />
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="button primary">Calculate</button>
+            <button type="reset" class="button secondary">Reset</button>
+          </div>
+        </form>
+
+        <div id="calc-message" class="calc-message" aria-live="polite"></div>
+
+        <div id="calc-results" class="results-panel" aria-live="polite">
+          <h3>Results</h3>
+          <p>Enter values to estimate daily, monthly, and yearly usage.</p>
+        </div>
+      </section>
+
+      <section class="content-card faq-section">
+        <h2>Frequently asked questions</h2>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Why does appliance energy use matter?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Energy use affects household running costs, carbon emissions, and comfort.
+              Understanding how much power a device consumes helps people choose more efficient options.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            How can I reduce electricity costs?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Reducing operating hours, prioritising energy-efficient appliances, and switching off standby devices can all decrease electricity use.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            Do smaller appliances use less energy?
+          </button>
+          <div class="faq-answer">
+            <p>
+              Not always. A small device can still consume significant energy if it runs for many hours each day, while a large appliance may be efficient when used sparingly.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Your Name</p>
+      <p>Generative AI acknowledgement: Not used for this project.</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
